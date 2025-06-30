@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>TITRE</title>
-    <link rel="shortcut icon" href="media/img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/main.css"><!-- CSS -->
-    <script src="script/main.js" defer></script><!-- JS -->
+    <title>Portfolio 2025 | SUAREZ Lucas</title>
+    <meta name="description" content="Découvrez mon portfolio 2025, mettant en avant mes projets créatifs, compétences et réalisations professionnelles.">
+    <link rel="shortcut icon" href="media/img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style/main.css"><!-- CSS Main -->
+    <link rel="stylesheet" href="style/navBar.css"><!-- CSS NavBar -->
+    <script src="script/navBar.js" defer></script><!-- JS NavBar -->
 </head>
 <body>
     <!-- Barre Nav -->

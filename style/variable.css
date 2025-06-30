@@ -2,4 +2,8 @@
 :root{
     --color-white: rgb(255,255,255);
     --color-black: rgb(0,0,0);
+    --color-orange: rgb(227, 139, 41);
+    --color-brown: rgb(136, 74, 57);
+    --color-beige: rgb(255, 194, 111);
+    --color-cream: rgb(253, 238, 220);
 }
