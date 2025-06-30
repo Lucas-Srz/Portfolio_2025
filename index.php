@@ -16,7 +16,18 @@
 
     <!-- Main -->
     <main>
-        <h1>Ceci est un tite</h1>
+        <!-- Accueil -->
+        <section id="acc">
+            <div id="contenu">
+                <div>
+                    <h1>Développeur web et web mobile</h1>
+                    <h2 class="off">SUAREZ Lucas</h2>
+                </div>
+                <img src="media/img/avatars.png" alt="Image de mon avatars me representant" class="off">
+            </div>
+            <span id="fondSupplementaire"></span>
+            <img src="media/img/vague.svg" alt="Image en forme de vague pour faire la liaison entre la barre de navigation et la suite du site" class="vague">
+        </section>
     </main>
     <footer></footer>
 </body>

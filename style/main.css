@@ -37,8 +37,36 @@ transform: scaleX(1);
 }
 
 
-
 /* ********************** CSS MOBILE FISRT ********************** */
+/* Vague */
+.vague{
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    /* bottom: 5vh; */
+    /* display: block; */
+}
+
+#acc{
+    position: relative;
+    text-transform: uppercase;
+    
+    #contenu{
+        z-index: 1;
+        position: absolute;
+    }
+
+    h1{
+        color: var(--color-cream);
+        margin-left: 10px;
+        font-size: medium;
+    }
+
+    h2{text-justify: auto;}
+
+    .off{display: none;}
+}
+
 
 /* *************** CSS POUR Tablette / Ordinateur *************** */
 /* XXX plus grand ou égale à XXXpx */
@@ -49,10 +77,65 @@ transform: scaleX(1);
 
 /* LapTop (NoteBock) ≥ 769px */
 @media screen and (min-width: 769px) {
+    #acc{
+        display: flex;
+        place-content: center;
 
+        .vague{top: 200px;}
+        .off{display: flex;}
+
+        #contenu{
+            display: flex;
+            flex-direction: row;
+            gap:50px;
+
+            div{
+                display: flex;
+                place-content: center;
+                align-items: center;
+                flex-direction: column-reverse;
+                h1{margin-left: 0;}
+
+                h2{
+                    color: var(--color-brown);
+                    font-size: 75px;
+                    width: 300px;
+                    text-align: center;
+                }
+            }
+
+            img{width: 255px;}
+        }
+
+        #fondSupplementaire{
+            background-color: var(--color-orange);
+            width: 100%;
+            height: 200px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 
 /* Desktop ≥ 1025px */
 @media screen and (min-width: 1025px) {
+    #acc{
+        display: flex;
+        place-content: center;
 
+        .vague{top: 350px;}
+
+        .off{display: flex;}
+
+        #contenu{
+            gap:225px;
+
+            img{width: 500px;}
+        }
+
+        #fondSupplementaire{
+            height: 350px;
+        }
+    }
 }
