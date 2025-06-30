@@ -1,0 +1,27 @@
+/* Import */
+@import url('variable.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ********************** CSS MOBILE FISRT ********************** */
+
+/* *************** CSS POUR Tablette / Ordinateur *************** */
+/* XXX plus grand ou égale à XXXpx */
+/* Tablette ≥ 426px */
+@media screen and (min-width: 426px) {
+
+}
+
+/* LapTop (NoteBock) ≥ 769px */
+@media screen and (min-width: 769px) {
+
+}
+
+/* Desktop ≥ 1025px */
+@media screen and (min-width: 1025px) {
+
+}
