@@ -10,7 +10,7 @@
 
 body{
     font-family: "Inter", sans-serif;
-    width: 100vw;
+    width: 100%;
 }
 
 /* - - - Animation Ligne - - - */
@@ -47,36 +47,97 @@ transform: scaleX(1);
     /* display: block; */
 }
 
+/* Acceuil */
 #acc{
     position: relative;
     text-transform: uppercase;
+    z-index: 1;
     
     #contenu{
         z-index: 1;
         position: absolute;
     }
 
-    h1{
+    .desc{
         color: var(--color-cream);
         margin-left: 10px;
         font-size: medium;
     }
 
-    h2{text-justify: auto;}
+    .nom{text-justify: auto;}
 
     .off{display: none;}
 }
 
+/* Information */
+#inf{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: repeat(2 33%);
+    background-color: var(--color-beige);
+    padding-top: 65px;
+    padding-bottom: 50px;
+    /* padding: 65px 15px; */
+
+    hgroup{
+        margin: 25px;
+        /* margin: 15px 0; */
+        /* margin-right: 15px; */
+        /* text-align: justify; */
+
+        h2{text-transform: uppercase;}
+    }
+
+    .sep{
+        grid-column: 1;
+        grid-row: 1 / 4;
+    }
+    .apr{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .dev{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .aut{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .lin {
+        background-color: var(--color-brown);
+        width: 5px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cer {
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-brown);
+        border: 5px solid var(--color-beige);
+        border-radius: 50%;
+        margin: auto;
+        margin-left: -8px;
+    }
+    
+}
 
 /* *************** CSS POUR Tablette / Ordinateur *************** */
 /* XXX plus grand ou égale à XXXpx */
 /* Tablette ≥ 426px */
 @media screen and (min-width: 426px) {
-
+    #inf{
+        padding-top: 125px;
+    }
 }
 
 /* LapTop (NoteBock) ≥ 769px */
 @media screen and (min-width: 769px) {
+    /* Acceuil */
     #acc{
         display: flex;
         place-content: center;
@@ -96,7 +157,7 @@ transform: scaleX(1);
                 flex-direction: column-reverse;
                 h1{margin-left: 0;}
 
-                h2{
+                .nom{
                     color: var(--color-brown);
                     font-size: 75px;
                     width: 300px;
@@ -116,10 +177,39 @@ transform: scaleX(1);
             left: 0;
         }
     }
+
+    /* Information */
+    #inf{
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: repeat(3 33%);
+        padding-top: 200px;
+
+        hgroup{
+            margin: 50px;
+        }
+
+        .sep{
+            grid-column: 2;
+            grid-row: 1 / 4;
+        }
+        .apr{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .dev{
+            grid-column: 3;
+            grid-row: 2;
+        }
+        .aut{
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
 }
 
 /* Desktop ≥ 1025px */
 @media screen and (min-width: 1025px) {
+    /* Acceuil */
     #acc{
         display: flex;
         place-content: center;
@@ -136,6 +226,15 @@ transform: scaleX(1);
 
         #fondSupplementaire{
             height: 350px;
+        }
+    }
+
+    /* Information */
+    #inf{
+        padding-top: 350px;
+
+        hgroup{
+            margin: 75px;
         }
     }
 }

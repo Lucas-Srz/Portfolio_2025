@@ -20,13 +20,38 @@
         <section id="acc">
             <div id="contenu">
                 <div>
-                    <h1>Développeur web et web mobile</h1>
-                    <h2 class="off">SUAREZ Lucas</h2>
+                    <h2 class="desc">Développeur web et web mobile</h2>
+                    <h2 class="nom off">SUAREZ Lucas</h2>
                 </div>
                 <img src="media/img/avatars.png" alt="Image de mon avatars me representant" class="off">
             </div>
             <span id="fondSupplementaire"></span>
             <img src="media/img/vague.svg" alt="Image en forme de vague pour faire la liaison entre la barre de navigation et la suite du site" class="vague">
+        </section>
+
+        <!-- Information -->
+        <section id="inf">
+            <div class="sep">
+                <div class="lin">
+                    <div class="cer"></div>
+                    <div class="cer"></div>
+                    <div class="cer"></div>
+                </div>
+            </div>
+            <hgroup class="apr">
+                <h2>À propos</h2>
+                <p>Je suis SUAREZ Lucas, un développeur web passionné. Mon objectif est de transformer des idées en réalités numériques, en partant d'une feuille blanche jusqu'à voir un site prendre vie à travers différentes inspirations !</p>
+            </hgroup>
+
+            <hgroup class="dev">
+                <h2>De moi</h2>
+                <p>Depuis 2018, je m'immerge dans l'univers du développement web, alliant créativité et savoir-faire technique. Avec une attention particulière portée au front-end, chaque détail compte pour offrir une expérience centrée sur l'utilisateur. Je m'assure que chaque projet est unique et qu’il répond aux besoins spécifiques, tout en utilisant les technologies et langages de programmation les plus récents.</p>
+            </hgroup>
+
+            <hgroup class="aut">
+                <h2>Et en dehors...</h2>
+                <p>En dehors du développement web, j'aime explorer les nouvelles tendances technologiques, les jeux vidéo et les jeux de société, notamment ceux basés sur des énigmes. Je suis également barman dans une salle de spectacle.</p>
+            </hgroup>
         </section>
     </main>
     <footer></footer>
