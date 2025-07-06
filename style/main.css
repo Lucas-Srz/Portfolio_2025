@@ -42,9 +42,16 @@ transform: scaleX(1);
 .vague{
     width: 100%;
     position: absolute;
-    /* left: 0; */
-    /* bottom: 5vh; */
-    /* display: block; */
+}
+
+.vagueBas{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: -2px;
+    margin-top: -1px;
+    background-color: var(--color-beige);
+    z-index: 2;
 }
 
 /* Acceuil */
@@ -238,3 +245,7 @@ transform: scaleX(1);
         }
     }
 }
+
+/* #inf *{
+    outline: 1px dashed red;
+} */

@@ -1,4 +1,4 @@
-console.log("Entrée dans le fichier navBar.js");
+console.log("navBar.js");
 
 var dom_navBar = document.getElementById('navBar');
 var dom_openBtn = document.getElementById('openBtn');
@@ -9,7 +9,7 @@ var addA, addSpanGroupe, addSpanUn, addSpanDeux, addSpanTrois;
 
 
 function init(){
-    console.log("Fonction : Init");
+    // console.log("Fonction : Init");
     
     addA = document.createElement("a");
     addA.setAttribute("href","#");

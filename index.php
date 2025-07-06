@@ -8,7 +8,9 @@
     <link rel="shortcut icon" href="media/img/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="style/main.css"><!-- CSS Main -->
     <link rel="stylesheet" href="style/navBar.css"><!-- CSS NavBar -->
+    <link rel="stylesheet" href="style/footer.css"><!-- CSS Footer -->
     <script src="script/navBar.js" defer></script><!-- JS NavBar -->
+    <script type="module" src="script/footer.js"></script><!-- JS Footer -->
 </head>
 <body>
     <!-- Barre Nav -->
@@ -26,7 +28,7 @@
                 <img src="media/img/avatars.png" alt="Image de mon avatars me representant" class="off">
             </div>
             <span id="fondSupplementaire"></span>
-            <img src="media/img/vague.svg" alt="Image en forme de vague pour faire la liaison entre la barre de navigation et la suite du site" class="vague">
+            <img src="media/img/vague.svg" alt="Vague décorative haut de page" class="vague">
         </section>
 
         <!-- Information -->
@@ -54,6 +56,7 @@
             </hgroup>
         </section>
     </main>
+    <img src="media/img/vagueBas.svg" alt="Image en forme de vague pour faire la liaison entre le site et le footer" class="vagueBas">
     <footer></footer>
 </body>
 </html>
