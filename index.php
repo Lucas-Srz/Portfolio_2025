@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="script/navBar.js" defer></script><!-- JS NavBar -->
     <script type="module" src="script/footer.js"></script><!-- JS Footer -->
 </head>
+
 <body>
     <!-- Barre Nav -->
     <?php require_once './view/component/navBar.php'; ?>
@@ -57,6 +59,9 @@
         </section>
     </main>
     <img src="media/img/vagueBas.svg" alt="Image en forme de vague pour faire la liaison entre le site et le footer" class="vagueBas">
-    <footer></footer>
+
+    <!-- Footer -->
+    <?php require_once './view/component/footer.php'; ?>
 </body>
+
 </html>
