@@ -75,7 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['CONNEXION'])) {
             // var_dump($data['password']);
             // var_dump(password_verify($password, $data['password']));
             if (password_verify($password, $data['password'])) {
-
                 if ($data['id_role'] === 1) {
                     // Valider la connexion pour les utilisateurs
                     $_SESSION['userId'] = $data['id'];

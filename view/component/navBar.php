@@ -19,9 +19,9 @@ if (isset($_SESSION['userId']) && $_SESSION['userId'] !== null) {
         $navBar .= ' <li><a href="/view/dashboard.php" class="animLigne">Dashboard</a></li>';
     }
 
-    $navBar .= '    <li><a href="/view/logout.php" class="animLigne">Déconnection</a></li>
-                    <li class="off"><a href="/view/#" class="animLigne">Mention Legal</a></li>
+    $navBar .= '    <li class="off"><a href="/view/#" class="animLigne">Mention Legal</a></li>
                     <li class="off"><a href="/view/#" class="animLigne">Accessibilité</a></li>
+                    <li><a href="/view/logout.php" class="animLigne">Déconnection</a></li>
                 </ul>
             </div>
         ';

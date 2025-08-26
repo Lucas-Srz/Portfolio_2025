@@ -1,6 +1,56 @@
 <?php
+require_once '../service/dbConnect.php';
 session_start();
+
+// Vérifier la non-existance de la clé userId dans $_SESSION
+if (!isset($_SESSION['userId'])) {
+    header('location: /index.php');
+    exit();
+}
+
+// Je récupère l'email de l'utilisateur à afficher
+$user = $_SESSION['userId'];
+
+$sql = 'SELECT * FROM user WHERE id = ' . $user . '';
+
+if (isset($db_connexion)) {
+    $statement = $db_connexion->query($sql);
+}
+
+// Je récupère les 5 todos dans un tableau à indices ordonnées. Il est multidimensionnel.
+$data = $statement->fetch();
+
+$lastName = $data['lastName'];
+$firstName = $data['firstName'];
+// Email afficher en 'XX*****XX@XX*******
+$email = $data['email'];
+
+// Explode de l'adresse et on récuper les différentes partie
+$expEmail = explode("@", $email);
+$local = $expEmail[0];
+$domain = $expEmail[1];
+
+// Taille des données
+$lenLocal = strlen($local);
+$lenDomain = strlen($domain);
+
+// On récuper les informations interesente
+$firstLetterLocal = substr($local, 0, 2);
+$lastLetterLocal = substr($local, -2);
+$firstLetterDomain = substr($domain, 0, 2);
+
+$emailHide = $firstLetterLocal;
+for ($i = 0; $i < ($lenLocal - 4); $i++) {
+    $emailHide .= '*';
+}
+$emailHide .= $lastLetterLocal;
+$emailHide .= '@';
+$emailHide .= $firstLetterDomain;
+for ($i = 0; $i < ($lenDomain - 2); $i++) {
+    $emailHide .= '*';
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,16 +67,25 @@ session_start();
     <script type="module" src="../script/footer.js"></script><!-- JS Footer -->
 </head>
 
-<body>
+<body class="home">
     <!-- Barre Nav -->
     <?php require_once 'component/navBar.php'; ?>
 
     <!-- Main -->
-    <main style="background-color: rgb(255, 194, 111);">
-        <!-- Accueil -->
-        <br>
-        <h1>Connection réussi !</h1>
-        <br>
+    <main>
+        <!-- Affichage du profil -->
+        <fieldset>
+            <legend>Profil</legend>
+            <p><span>Nom :</span> <?= $lastName ?></p>
+            <p><span>Prénom :</span> <?= $firstName ?></p>
+            <p><span>Adresse mail :</span> <?= $emailHide ?></p>
+            <p><span>Mot de passe :</span> ************</p>
+        </fieldset>
+
+        <div class="infoPerso">
+            <a href="#">Changer mes informations personelles</a>
+        </div>
+
     </main>
     <img src="../media/img/vagueBas.svg" alt="Image en forme de vague pour faire la liaison entre le site et le footer" class="vagueBas">
 

@@ -133,6 +133,53 @@ transform: scaleX(1);
     
 }
 
+/* - - - - - Home.php - - - - - */
+.home{
+    background-color: var(--color-beige);
+    color: var(--color-brown);
+    text-align: center;
+    
+    fieldset{
+        border: 3px solid var(--color-brown);
+        margin: 3%;
+        padding: 25px;
+        text-align: left;
+
+        legend{
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0 5%;
+            /* color: var(--color-brown); */
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        p{
+            margin-bottom: 5px;
+        }
+
+        p span{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+
+    .infoPerso {
+        margin-bottom: 25px;
+
+        a{
+            color: var(--color-brown);
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    
+    
+}
+
 /* *************** CSS POUR Tablette / Ordinateur *************** */
 /* XXX plus grand ou égale à XXXpx */
 /* Tablette ≥ 426px */
