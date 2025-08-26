@@ -33,12 +33,14 @@
         <div class="divDescConn notDisplay">
             <div class="troisFormulaire">
                 <div>
-                    <form action="#" method="POST">
+                    <form action="/view/signin.php" method="POST">
                         <label for="idEmailCon">Adresse mail :</label>
-                        <input type="email" id="idEmailCon" name="emailCon">
+                        <input type="email" name="emailCon" id="idEmailCon" placeholder="<?= isset($errorsChampsCon['emailCon']) ? $errorsChampsCon['emailCon'] : "" ?>">
 
                         <label for="idPasswordCon">Mot de passe :</label>
-                        <input type="password" id="idPasswordCon" name="passwordCon">
+                        <input type="password" name="passwordCon" id="idPasswordCon" placeholder="<?= isset($errorsChampsCon['passwordCon']) ? $errorsChampsCon['passwordCon'] : "" ?>">
+
+                        <p class="messageError"><?= isset($errorsChampsCon['messageError']) ? $errorsChampsCon['messageError'] : "" ?></p>
 
                         <a href="#">Mot de passe oublié</a>
 

@@ -138,28 +138,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['INSCRIPTION'])) {
             // L'exécuter
             $db_statement->execute();
             $errorsChampsIns['messageValid'] = ACCOUNT_CREATED;
-            // header('location: ../index.php#conn');
+            $_SESSION['errorMessageIns'] = $errorsChampsIns;
+            header('location: ../index.php#conn');
             exit();
         } else {
             $errorsChampsIns['messageError'] = ERROR_USE_INSC;
             $_SESSION['errorMessageIns'] = $errorsChampsIns;
             header('Location: ../index.php#conn');
-            // Véfification si le mail est déja utiliser
-            // $sql_double = 'SELECT email FROM user WHERE email = :email;';
-            // if (isset($db_connexion)) {
-            //     $db_statement_double = $db_connexion->prepare($sql_double);
-            // }
-            // $db_statement_double->bindParam(':email', $email);
-            // $db_statement_double->execute();
-
-            // $result = $db_statement_double->fetchAll(PDO::FETCH_ASSOC);
-            // var_dump($result);
-            // foreach ($result as $key) {
-            //     if ($key['email'] === $email) {
-            //         $errorsChampsIns['email'] = ERROR_VALUE_DOUBLE_EMAIL_INSC;
-            //         exit();
-            //     }
-            // }
             exit();
         }
     } else {

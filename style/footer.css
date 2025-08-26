@@ -92,8 +92,14 @@ footer {
                 color: var(--color-red);
             }
 
+            .messageError{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
             .messageValid{
                 color: var(--color-green);
+                text-align: center; 
             }
 
             a {

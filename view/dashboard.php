@@ -25,7 +25,7 @@ session_start();
     <main style="background-color: rgb(255, 194, 111);">
         <!-- Accueil -->
         <br>
-        <h1>Connection réussi !</h1>
+        <h1>Connection réussi ! dashboard</h1>
         <br>
     </main>
     <img src="../media/img/vagueBas.svg" alt="Image en forme de vague pour faire la liaison entre le site et le footer" class="vagueBas">
