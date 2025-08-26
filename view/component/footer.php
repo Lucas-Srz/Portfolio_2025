@@ -40,6 +40,8 @@
                         <label for="idPasswordCon">Mot de passe :</label>
                         <input type="password" id="idPasswordCon" name="passwordCon">
 
+                        <a href="#">Mot de passe oublié</a>
+
                         <input type="submit" value="Se connecter" name="CONNEXION">
                     </form>
                 </div>
@@ -49,28 +51,34 @@
                     </div>
                 </div>
                 <div>
-                    <form action="#" method="POST">
+                    <form action="/view/signup.php" method="POST">
                         <label for="idLastNameIns">Nom :</label>
-                        <input type="text" name="lastNameIns" id="idLastNameIns">
+                        <input type="text" name="lastNameIns" id="idLastNameIns" placeholder="<?= isset($errorsChampsIns['lastNameIns']) ? $errorsChampsIns['lastNameIns'] : "" ?>">
 
-                        <label for="idfirstNameIns">Prénom :</label>
-                        <input type="text" name="firstNameIns" id="idfirstNameIns">
+                        <label for=" idfirstNameIns">Prénom :</label>
+                        <input type="text" name="firstNameIns" id="idfirstNameIns" placeholder="<?= isset($errorsChampsIns['firstNameIns']) ? $errorsChampsIns['firstNameIns'] : "" ?>">
 
-                        <label for="idEmailIns">Adresse mail :</label>
-                        <input type="email" id="idEmailIns" name="emailIns">
+                        <label for=" idEmailIns">Adresse mail :</label>
+                        <input type="email" name="emailIns" id="idEmailIns" placeholder="<?= isset($errorsChampsIns['emailIns']) ? $errorsChampsIns['emailIns'] : "" ?>">
 
-                        <label for="idPasswordIns">Mot de passe :</label>
-                        <input type="password" id="idPasswordIns" name="passwordIns">
+                        <label for=" idPasswordIns">Mot de passe :</label>
+                        <input type="password" name="passwordIns" id="idPasswordIns" placeholder="<?= isset($errorsChampsIns['passwordIns']) ? $errorsChampsIns['passwordIns'] : "" ?>">
 
-                        <label for="idPasswordConfIns">Confirmation du mot de passe :</label>
-                        <input type="password" id="idPasswordConfIns" name="passwordConfIns">
+                        <label for=" idPasswordConfIns">Confirmation du mot de passe :</label>
+                        <input type="password" name="passwordConfIns" id="idPasswordConfIns" placeholder="<?= isset($errorsChampsIns['passwordConfIns']) ? $errorsChampsIns['passwordConfIns'] : "" ?>">
 
-                        <label for="idCheck" class="check">
-                            <input type="checkbox" id="idCheck" name="check">
+                        <div class="check">
+                            <label for=" idCheck" class="check"></label>
+                            <input type="checkbox" name="check" id="idCheck">
                             <a href="#">J'accepte les conditions d'utilisation</a>
-                        </label>
+                        </div>
+
+                        <p class="messageError"><?= isset($errorsChampsIns['messageError']) ? $errorsChampsIns['messageError'] : "" ?></p>
 
                         <input type="submit" value="Valider votre inscription" name="INSCRIPTION">
+
+                        <p class="messageValid"><?= isset($errorsChampsIns['messageValid']) ? $errorsChampsIns['messageValid'] : "" ?></p>
+
                     </form>
                 </div>
             </div>

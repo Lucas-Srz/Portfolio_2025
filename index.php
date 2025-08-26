@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION['errorMessageIns'])) {
+    $errorsChampsIns = $_SESSION['errorMessageIns'];
+}
+
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
