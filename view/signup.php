@@ -56,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['INSCRIPTION'])) {
     // LastName
     if (!$lastName) {
         $errorsChampsIns['lastNameIns'] = ERROR_REQUIRED_INSC;
-        var_dump($errorsChampsIns['lastNameIns']);
     }
     // FirstName
     if (!$firstName) {

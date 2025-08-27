@@ -55,7 +55,7 @@ fieldset{
         text-transform: uppercase;
         text-align: center;
         padding: 0 5%;
-        /* color: var(--color-brown); */
+        color: var(--color-brown);
         font-size: larger;
         font-weight: bold;
     }
@@ -157,23 +157,26 @@ fieldset{
     
 }
 
-/* - - - - - Home.php - - - - - */
+/* - - - - - Home.php / Update.php - - - - - */
 .home{
     background-color: var(--color-beige);
     color: var(--color-brown);
     text-align: center;
     
     
+    p, label, input{
+        margin-bottom: 5px;
+    }
 
-        p{
-            margin-bottom: 5px;
-        }
+    p span, label{
+        text-decoration: underline;
+        font-weight: bold;
+    }
 
-        p span{
-            text-decoration: underline;
-            font-weight: bold;
-        }
-    
+    form{
+        display: flex;
+        flex-direction: column;
+    }
 
     .infoPerso {
         margin-bottom: 25px;
@@ -186,6 +189,25 @@ fieldset{
         a:hover{
             text-decoration: underline;
         }
+    }
+
+    .btn, input[type="submit"]{
+        cursor: pointer;
+        background-color: var(--color-brown);
+        color: var(--color-cream);
+        text-transform: uppercase;
+        padding: 5px;
+        margin: 10px 0;
+        font-family: "Inter", sans-serif;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 5px 25px;
+    }
+
+    .btn:hover{
+        background-color: var(--color-cream);
+        color: var(--color-brown);
+        border: 0;
     }
 }
 

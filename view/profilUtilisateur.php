@@ -54,8 +54,8 @@ for ($i = 0; $i < count($data); $i++) {
     $listProfilUtilisateur .= "<p><span>Mdp :</span> ************</p>";
     $listProfilUtilisateur .= "</div>";
     $listProfilUtilisateur .= "<div class='img'>";
-    $listProfilUtilisateur .= "<a href='#'><img src='../media/img/edit.svg' alt='Editée un profil'></img></a>";
-    $listProfilUtilisateur .= "<a href='#'><img src='../media/img/delete.svg' alt='Editée un profil'></img></a>";
+    $listProfilUtilisateur .= "<a href='./dashboard/update_profil.php?id=" . $data[$i]['id'] . "'><img src='../media/img/edit.svg' alt='Editée un profil'></img></a>";
+    $listProfilUtilisateur .= "<a href='./dashboard/delete_profil.php?id=" . $data[$i]['id'] . "'><img src='../media/img/delete.svg' alt='Editée un profil'></img></a>";
     $listProfilUtilisateur .= "</div>";
     $listProfilUtilisateur .= "</article>";
     $listProfilUtilisateur .= "<span class='ligne'></span>";
