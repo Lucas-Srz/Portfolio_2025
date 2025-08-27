@@ -36,6 +36,30 @@ transition: .3s linear;
 transform: scaleX(1);
 }
 
+.display {
+    display: flex;
+}
+
+.notDisplay {
+    display: none;
+}
+
+/* - - - Fieldset & Legend - - - */
+fieldset{
+    border: 3px solid var(--color-brown);
+    margin: 3%;
+    padding: 25px;
+    text-align: left;
+
+    legend{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 5%;
+        /* color: var(--color-brown); */
+        font-size: larger;
+        font-weight: bold;
+    }
+}
 
 /* ********************** CSS MOBILE FISRT ********************** */
 /* Vague */
@@ -139,20 +163,7 @@ transform: scaleX(1);
     color: var(--color-brown);
     text-align: center;
     
-    fieldset{
-        border: 3px solid var(--color-brown);
-        margin: 3%;
-        padding: 25px;
-        text-align: left;
-
-        legend{
-            text-transform: uppercase;
-            text-align: center;
-            padding: 0 5%;
-            /* color: var(--color-brown); */
-            font-size: larger;
-            font-weight: bold;
-        }
+    
 
         p{
             margin-bottom: 5px;
@@ -162,7 +173,7 @@ transform: scaleX(1);
             text-decoration: underline;
             font-weight: bold;
         }
-    }
+    
 
     .infoPerso {
         margin-bottom: 25px;
@@ -176,9 +187,81 @@ transform: scaleX(1);
             text-decoration: underline;
         }
     }
-    
-    
 }
+
+/* - - - - - Dashboard - - - - - */
+.dashboard{
+    background-color: var(--color-beige);
+
+    main{
+        padding: 25px;
+
+        .divBtn{
+            gap: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+
+            .btn{
+                cursor: pointer;
+                background-color: var(--color-brown);
+                color: var(--color-cream);
+                text-transform: uppercase;
+                padding: 5px;
+                margin: 10px 0;
+                font-family: "Inter", sans-serif;
+                border-radius: 10px;
+                text-decoration: none;
+                padding: 5px 25px
+            }
+
+            .btn:hover{
+                background-color: var(--color-cream);
+                color: var(--color-brown);
+                border: 0;
+            }
+        }
+        
+        
+    }
+}
+
+/* - - - - - Profil Utilisateur - - - - - */
+section{
+    width: 100%;
+
+    .articleProfilUtilisateur{
+        width: 100%;
+        color: var(--color-brown);
+        .img{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        p{
+            margin-bottom: 5px;
+        }
+        
+        p span{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+
+    .ligne{
+        background-color: var(--color-brown);
+        width: 95%;
+        height: 5px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 100px;
+        margin: 15px;
+    }
+}
+
+/* - - - - - Projet - - - - - */
 
 /* *************** CSS POUR Tablette / Ordinateur *************** */
 /* XXX plus grand ou égale à XXXpx */
@@ -259,6 +342,16 @@ transform: scaleX(1);
             grid-row: 3;
         }
     }
+
+    /* Profil Utilisateur */
+    .articleProfilUtilisateur{
+        display: flex;
+        justify-content: space-between;
+
+        .img{
+            flex-direction: column;
+        }
+    }
 }
 
 /* Desktop ≥ 1025px */
@@ -292,7 +385,3 @@ transform: scaleX(1);
         }
     }
 }
-
-/* #inf *{
-    outline: 1px dashed red;
-} */

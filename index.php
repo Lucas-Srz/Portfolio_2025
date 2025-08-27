@@ -1,17 +1,20 @@
 <?php
 session_start();
 
+
 // Message pour l'inscription
 if (isset($_SESSION['errorMessageIns'])) {
     $errorsChampsIns = $_SESSION['errorMessageIns'];
+    unset($_SESSION['errorMessageIns']);
 }
 
 // Message pour la connexion
 if (isset($_SESSION['errorMessageCon'])) {
     $errorsChampsCon = $_SESSION['errorMessageCon'];
+    unset($_SESSION['errorMessageCon']);
 }
 
-session_destroy();
+// session_destroy();
 ?>
 
 <!DOCTYPE html>

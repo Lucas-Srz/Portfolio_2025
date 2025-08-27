@@ -17,7 +17,6 @@ if (isset($db_connexion)) {
     $statement = $db_connexion->query($sql);
 }
 
-// Je récupère les 5 todos dans un tableau à indices ordonnées. Il est multidimensionnel.
 $data = $statement->fetch();
 
 $lastName = $data['lastName'];

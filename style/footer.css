@@ -3,14 +3,6 @@
 
 
 /* - - - - - FOOTER - - - - - */
-.display {
-    display: flex;
-}
-
-.notDisplay {
-    display: none;
-}
-
 .rotate {
     transform: rotate(90deg);
 }
