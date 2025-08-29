@@ -23,14 +23,16 @@ if (!isset($_SESSION['userId']) || $_SESSION['admin'] !== 'isAdmin') {
     <script type="module" src="../script/footer.js"></script><!-- JS Footer -->
 </head>
 
-<body class="dashboard">
-    <!-- Barre Nav -->
-    <?php require_once 'component/navBar.php'; ?>
+<body>
+    <header>
+        <!-- Barre Nav -->
+        <?php require_once 'component/navBar.php'; ?>
+    </header>
 
     <!-- Main -->
-    <main>
+    <main class="home">
         <!-- Bouton -->
-        <div class="divBtn">
+        <div class="divBtn divBtnTop">
             <a onclick="profilUtilisateur()" class="btn">Profil Utilisateur</a>
             <a onclick="projets()" class="btn">Projets</a>
         </div>
@@ -42,7 +44,6 @@ if (!isset($_SESSION['userId']) || $_SESSION['admin'] !== 'isAdmin') {
 
             <!-- Projets -->
             <?php require_once 'projets.php'; ?>
-
         </div>
     </main>
     <img src="../media/img/vagueBas.svg" alt="Image en forme de vague pour faire la liaison entre le site et le footer" class="vagueBas">

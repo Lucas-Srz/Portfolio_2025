@@ -34,8 +34,10 @@ if (isset($_SESSION['errorMessageCon'])) {
 </head>
 
 <body>
-    <!-- Barre Nav -->
-    <?php require_once './view/component/navBar.php'; ?>
+    <header>
+        <!-- Barre Nav -->
+        <?php require_once './view/component/navBar.php'; ?>
+    </header>
 
     <!-- Main -->
     <main>

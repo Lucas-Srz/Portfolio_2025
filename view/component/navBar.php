@@ -52,5 +52,4 @@ else {
 
     <!-- Appel à la barre de Nav -->
     <?= $navBar; ?>
-
 </nav>

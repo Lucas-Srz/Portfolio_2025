@@ -66,12 +66,14 @@ for ($i = 0; $i < ($lenDomain - 2); $i++) {
     <script type="module" src="../script/footer.js"></script><!-- JS Footer -->
 </head>
 
-<body class="home">
-    <!-- Barre Nav -->
-    <?php require_once 'component/navBar.php'; ?>
+<body>
+    <header>
+        <!-- Barre Nav -->
+        <?php require_once 'component/navBar.php'; ?>
+    </header>
 
     <!-- Main -->
-    <main>
+    <main class="home">
         <!-- Affichage du profil -->
         <fieldset>
             <legend>Profil</legend>
@@ -81,8 +83,8 @@ for ($i = 0; $i < ($lenDomain - 2); $i++) {
             <p><span>Mot de passe :</span> ************</p>
         </fieldset>
 
-        <div class="infoPerso">
-            <a href="#">Changer mes informations personelles</a>
+        <div class="divBtn">
+            <a href="#" class="btn">Changer mes informations personelles</a>
         </div>
 
     </main>

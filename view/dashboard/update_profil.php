@@ -119,22 +119,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['UPDATE'])) {
     <script type="module" src="../../script/footer.js"></script><!-- JS Footer -->
 </head>
 
-<body class="home">
-    <!-- Barre Nav -->
-    <?php require_once '../component/navBar.php'; ?>
+<body>
+    <header>
+        <!-- Barre Nav -->
+        <?php require_once '../component/navBar.php'; ?>
+    </header>
 
     <!-- Main -->
-    <main>
+    <main class="home">
         <fieldset>
             <legend>Modifier le profil</legend>
-            <form action="#" method="post">
-                <!-- Titre -->
-                <label for="idLastName">Nom :</label>
-                <input type="text" id="idLastName" name="lastName" value="<?= htmlspecialchars($lastName); ?>" <?= $errorsChamps['lastName'] ? 'placeholder=\'' . $errorsChamps['lastName'] . '\'' : "" ?>>
-                <!-- Titre -->
-                <label for="idFirstName">Prénom :</label>
-                <input type="text" id="idFirstName" name="firstName" value="<?= htmlspecialchars($firstName); ?>" <?= $errorsChamps['firstName'] ? 'placeholder=\'' . $errorsChamps['firstName'] . '\'' : "" ?>>
-                <!-- Titre -->
+            <form action="#" method="post" class="update">
+                <div class="nomPrenom">
+                    <div class="nom">
+                        <!-- Nom -->
+                        <label for="idLastName">Nom :</label>
+                        <input type="text" id="idLastName" name="lastName" value="<?= htmlspecialchars($lastName); ?>" <?= $errorsChamps['lastName'] ? 'placeholder=\'' . $errorsChamps['lastName'] . '\'' : "" ?>>
+                    </div>
+                    <div class="nom">
+                        <!-- Prénom -->
+                        <label for="idFirstName">Prénom :</label>
+                        <input type="text" id="idFirstName" name="firstName" value="<?= htmlspecialchars($firstName); ?>" <?= $errorsChamps['firstName'] ? 'placeholder=\'' . $errorsChamps['firstName'] . '\'' : "" ?>>
+                    </div>
+                </div>
+                <!-- Email -->
                 <label for="idEmail">Email :</label>
                 <input type="text" id="idEmail" name="email" value="<?= htmlspecialchars($email); ?>" <?= $errorsChamps['email'] ? 'placeholder=\'' . $errorsChamps['email'] . '\'' : "" ?>>
 
@@ -148,8 +156,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['UPDATE'])) {
             </form>
         </fieldset>
         <!-- Lien retour -->
-        <a href="../dashboard.php" class="btn">Retour</a>
+        <div class="divBtn">
+            <a href="../dashboard.php" class="btn">Retour</a>
+        </div>
     </main>
+    <img src="../../media/img/vagueBas.svg" alt="Image en forme de vague pour faire la liaison entre le site et le footer" class="vagueBas">
+
+    <!-- Footer -->
+    <?php require_once '../component/footer.php'; ?>
 
 </body>
 

@@ -10,7 +10,7 @@
         <div class="divDescCont">
             <div class="link">
                 <a href="mailto:suarez.lucas.pro@gmail.com" target="_blank">
-                    <img src="../media/img/mail.svg" alt="Icon mail">
+                    <img src="../../media/img/mail.svg" alt="Icon mail">
                 </a>
                 <a href="tel:0651453617" target="_blank">
                     <img src="../../media/img/telephone.svg" alt="Icon Telephone">

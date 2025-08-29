@@ -9,6 +9,7 @@
 }
 
 body{
+    background-color: var(--color-beige);
     font-family: "Inter", sans-serif;
     width: 100%;
 }
@@ -42,23 +43,6 @@ transform: scaleX(1);
 
 .notDisplay {
     display: none;
-}
-
-/* - - - Fieldset & Legend - - - */
-fieldset{
-    border: 3px solid var(--color-brown);
-    margin: 3%;
-    padding: 25px;
-    text-align: left;
-
-    legend{
-        text-transform: uppercase;
-        text-align: center;
-        padding: 0 5%;
-        color: var(--color-brown);
-        font-size: larger;
-        font-weight: bold;
-    }
 }
 
 /* ********************** CSS MOBILE FISRT ********************** */
@@ -157,15 +141,25 @@ fieldset{
     
 }
 
-/* - - - - - Home.php / Update.php - - - - - */
+/* - - - - - Page avec fieldset & Legend - - - - - */
 .home{
-    background-color: var(--color-beige);
+    /* background-color: var(--color-beige); */
     color: var(--color-brown);
-    text-align: center;
-    
-    
-    p, label, input{
-        margin-bottom: 5px;
+
+    fieldset{
+        border: 3px solid var(--color-brown);
+        margin: 3%;
+        padding: 25px;
+        text-align: left;
+
+        legend{
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0 5%;
+            color: var(--color-brown);
+            font-size: larger;
+            font-weight: bold;
+        }
     }
 
     p span, label{
@@ -173,23 +167,14 @@ fieldset{
         font-weight: bold;
     }
 
-    form{
+    .divBtn{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
     }
 
-    .infoPerso {
-        margin-bottom: 25px;
-
-        a{
-            color: var(--color-brown);
-            text-decoration: none;
-        }
-
-        a:hover{
-            text-decoration: underline;
-        }
-    }
+    .divBtnTop{margin-top: 25px;}
 
     .btn, input[type="submit"]{
         cursor: pointer;
@@ -202,73 +187,13 @@ fieldset{
         border-radius: 10px;
         text-decoration: none;
         padding: 5px 25px;
+        border: 0;
     }
 
-    .btn:hover{
+    .btn:hover, input[type="submit"]:hover{
         background-color: var(--color-cream);
         color: var(--color-brown);
         border: 0;
-    }
-}
-
-/* - - - - - Dashboard - - - - - */
-.dashboard{
-    background-color: var(--color-beige);
-
-    main{
-        padding: 25px;
-
-        .divBtn{
-            gap: 25px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            
-
-            .btn{
-                cursor: pointer;
-                background-color: var(--color-brown);
-                color: var(--color-cream);
-                text-transform: uppercase;
-                padding: 5px;
-                margin: 10px 0;
-                font-family: "Inter", sans-serif;
-                border-radius: 10px;
-                text-decoration: none;
-                padding: 5px 25px
-            }
-
-            .btn:hover{
-                background-color: var(--color-cream);
-                color: var(--color-brown);
-                border: 0;
-            }
-        }
-        
-        
-    }
-}
-
-/* - - - - - Profil Utilisateur - - - - - */
-section{
-    width: 100%;
-
-    .articleProfilUtilisateur{
-        width: 100%;
-        color: var(--color-brown);
-        .img{
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        p{
-            margin-bottom: 5px;
-        }
-        
-        p span{
-            text-decoration: underline;
-            font-weight: bold;
-        }
     }
 
     .ligne{
@@ -279,11 +204,55 @@ section{
         display: flex;
         flex-direction: column;
         border-radius: 100px;
-        margin: 15px;
+    }
+
+    section{width: 100%;}
+    article{margin: 15px 0;}
+
+    .articleProfilUtilisateur{
+        width: 100%;
+
+        .img{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        p{
+            margin-bottom: 5px;
+        }
+    }
+
+    .update{
+        display: flex;
+        flex-direction: column;
+        .nomPrenom{
+            display: flex;
+            flex-direction: column;
+
+            .nom{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        label, input{
+            margin-bottom: 5px;
+        }
+        input[type="submit"]{
+            margin: auto;
+            margin-top: 5px;
+        }
+    }
+
+    input[type="text"], input[type="email"], input[type="password"]{
+        background-color: var(--color-cream);
+        border: 1px solid var(--color-brown);
+        margin-bottom: 10px;
+        padding: 5px;
     }
 }
 
-/* - - - - - Projet - - - - - */
+
+
 
 /* *************** CSS POUR Tablette / Ordinateur *************** */
 /* XXX plus grand ou égale à XXXpx */
@@ -365,14 +334,27 @@ section{
         }
     }
 
-    /* Profil Utilisateur */
-    .articleProfilUtilisateur{
-        display: flex;
-        justify-content: space-between;
-
-        .img{
-            flex-direction: column;
+    /* - - - - - Page avec fieldset & Legend - - - - - */
+    .home{
+        .articleProfilUtilisateur{
+            display: flex;
+            justify-content: space-between;
+    
+            .img{
+                flex-direction: column;
+            }
         }
+
+        .update{
+            .nomPrenom{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .nom{
+                    width: 45%;
+                }
+            }
+    }
     }
 }
 
